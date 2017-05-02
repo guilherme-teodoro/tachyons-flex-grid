@@ -1,0 +1,40 @@
+{
+  "name": "tachyons-flex-grid",
+  "version": "1.0.0",
+  "description": "A 12 column flexbox grid for Tachyons",
+  "author": {
+    "name": "Guilherme Teodoro",
+    "email": "guiherme.m.teodoro@gmail.com",
+    "url": "http://guilhermeteodoro.com"
+  },
+  "contributors": [
+    {
+      "name": "Guilherme Teodoro",
+      "email": "guiherme.m.teodoro@gmail.com"
+    },
+    {
+      "name": "Marcelo Nomoto",
+      "url": "https://github.com/mynomoto"
+    }
+  ],
+  "scripts": {
+    "start": "tachyons src/tachyons-flex-grid.css > css/tachyons-flex-grid.css && tachyons src/tachyons-flex-grid.css --minify > css/tachyons-flex-grid.min.css && tachyons src/tachyons-flex-grid.css --generate-docs --package=./package.json > readme.md"
+  },
+  "style": "src/tachyons-flex-grid.css",
+  "files": [
+    "src",
+    "css"
+  ],
+  "keywords": [
+    "tachyons",
+    "tachyons-css",
+    "tachyons-grid",
+    "tachyons-flex-grid",
+    "flex-grid"
+  ],
+  "repository": "guilherme-teodoro/tachyons-flex-grid",
+  "license": "MIT",
+  "devDependencies": {
+    "tachyons-cli": "^1.0.10"
+  }
+}
