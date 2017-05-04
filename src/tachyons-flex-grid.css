@@ -24,7 +24,8 @@
 
 .col {
     max-width: 100%;
-    flex-basis: 1;
+    flex-basis: 0;
+    flex-grow: 1;
     padding: 0 var(--gutter);
 }
 
@@ -90,6 +91,13 @@
 }
 
 @media (--breakpoint-not-small) {
+    .col-ns {
+      max-width: 100%;
+      flex-basis: 0;
+      flex-grow: 1;
+      padding: 0 var(--gutter);
+    }
+
     .col1-ns {
         max-width: calc(100% / 12);
         flex-basis: calc(100% / 12);
@@ -153,6 +161,13 @@
 }
 
 @media (--breakpoint-medium) {
+    .col-m {
+      max-width: 100%;
+      flex-basis: 0;
+      flex-grow: 1;
+      padding: 0 var(--gutter);
+    }
+
     .col1-m {
         max-width: calc(100% / 12);
         flex-basis: calc(100% / 12);
@@ -216,6 +231,13 @@
 }
 
 @media (--breakpoint-large) {
+    .col-l {
+      max-width: 100%;
+      flex-basis: 0;
+      flex-grow: 1;
+      padding: 0 var(--gutter);
+    }
+
     .col1-l {
         max-width: calc(100% / 12);
         flex-basis: calc(100% / 12);
