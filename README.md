@@ -1,10 +1,10 @@
-# tachyons-flex-grid 1.0.0
+# tachyons-flex-grid 1.1.0
 
-12 column flexbox grid
+A 12 column flexbox grid for Tachyons
 
 #### Stats
 
-579 | 50 | 203
+616 | 53 | 227
 ---|---|---
 bytes | selectors | declarations
 
@@ -42,10 +42,10 @@ Import the css module
 @import "tachyons-flex-grid";
 ```
 
-Then process the css using the [`tachyons-flex-grid`](https://github.com/tachyons-css/tachyons-flex-grid)
+Then process the css using the [`tachyons-cli`](https://github.com/tachyons-css/tachyons-cli)
 
 ```sh
-$ npm i -g tachyons-flex-grid
+$ npm i -g tachyons-cli
 $ tachyons path/to/css-file.css > dist/t.css
 ```
 
@@ -55,7 +55,7 @@ $ tachyons path/to/css-file.css > dist/t.css
 The easiest and most simple way to use the css is to use the cdn hosted version. Include it in the head of your html with:
 
 ```
-<link rel="stylesheet" href="http://unpkg.com/tachyons-flex-grid@1.0.0/css/tachyons-flex-grid.min.css" />
+<link rel="stylesheet" href="http://unpkg.com/tachyons-flex-grid@1.1.0/css/tachyons-flex-grid.min.css" />
 ```
 
 ##### Locally
@@ -82,7 +82,7 @@ Running `$ npm start` will process the source css and place the built css in the
 
 */
 .row { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; margin-left: -.5rem; margin-right: -.5rem; }
-.col { max-width: 100%; -ms-flex-preferred-size: 1; flex-basis: 1; padding: 0 .5rem; }
+.col { max-width: 100%; -ms-flex-preferred-size: 0; flex-basis: 0; -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; padding: 0 .5rem; }
 .col1 { max-width: calc( 100% / 12 ); -ms-flex-preferred-size: calc( 100% / 12 ); flex-basis: calc( 100% / 12 ); padding: 0 .5rem; }
 .col2 { max-width: calc( ( 100% / 12 ) * 2 ); -ms-flex-preferred-size: calc( ( 100% / 12 ) * 2 ); flex-basis: calc( ( 100% / 12 ) * 2 ); padding: 0 .5rem; }
 .col3 { max-width: calc( ( 100% / 12 ) * 3 ); -ms-flex-preferred-size: calc( ( 100% / 12 ) * 3 ); flex-basis: calc( ( 100% / 12 ) * 3 ); padding: 0 .5rem; }
@@ -96,6 +96,7 @@ Running `$ npm start` will process the source css and place the built css in the
 .col11 { max-width: calc( ( 100% / 12 ) * 11 ); -ms-flex-preferred-size: calc( ( 100% / 12 ) * 11 ); flex-basis: calc( ( 100% / 12 ) * 11 ); padding: 0 .5rem; }
 .col12 { max-width: 100%; -ms-flex-preferred-size: 100%; flex-basis: 100%; padding: 0 .5rem; }
 @media screen and (min-width: 30em) {
+ .col-ns { max-width: 100%; -ms-flex-preferred-size: 0; flex-basis: 0; -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; padding: 0 .5rem; }
  .col1-ns { max-width: calc( 100% / 12 ); -ms-flex-preferred-size: calc( 100% / 12 ); flex-basis: calc( 100% / 12 ); padding: 0 .5rem; }
  .col2-ns { max-width: calc( ( 100% / 12 ) * 2 ); -ms-flex-preferred-size: calc( ( 100% / 12 ) * 2 ); flex-basis: calc( ( 100% / 12 ) * 2 ); padding: 0 .5rem; }
  .col3-ns { max-width: calc( ( 100% / 12 ) * 3 ); -ms-flex-preferred-size: calc( ( 100% / 12 ) * 3 ); flex-basis: calc( ( 100% / 12 ) * 3 ); padding: 0 .5rem; }
@@ -110,6 +111,7 @@ Running `$ npm start` will process the source css and place the built css in the
  .col12-ns { max-width: 100%; -ms-flex-preferred-size: 100%; flex-basis: 100%; padding: 0 .5rem; }
 }
 @media screen and (min-width: 30em) and (max-width: 60em) {
+ .col-m { max-width: 100%; -ms-flex-preferred-size: 0; flex-basis: 0; -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; padding: 0 .5rem; }
  .col1-m { max-width: calc( 100% / 12 ); -ms-flex-preferred-size: calc( 100% / 12 ); flex-basis: calc( 100% / 12 ); padding: 0 .5rem; }
  .col2-m { max-width: calc( ( 100% / 12 ) * 2 ); -ms-flex-preferred-size: calc( ( 100% / 12 ) * 2 ); flex-basis: calc( ( 100% / 12 ) * 2 ); padding: 0 .5rem; }
  .col3-m { max-width: calc( ( 100% / 12 ) * 3 ); -ms-flex-preferred-size: calc( ( 100% / 12 ) * 3 ); flex-basis: calc( ( 100% / 12 ) * 3 ); padding: 0 .5rem; }
@@ -124,6 +126,7 @@ Running `$ npm start` will process the source css and place the built css in the
  .col12-m { max-width: 100%; -ms-flex-preferred-size: 100%; flex-basis: 100%; padding: 0 .5rem; }
 }
 @media screen and (min-width: 60em) {
+ .col-l { max-width: 100%; -ms-flex-preferred-size: 0; flex-basis: 0; -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; padding: 0 .5rem; }
  .col1-l { max-width: calc( 100% / 12 ); -ms-flex-preferred-size: calc( 100% / 12 ); flex-basis: calc( 100% / 12 ); padding: 0 .5rem; }
  .col2-l { max-width: calc( ( 100% / 12 ) * 2 ); -ms-flex-preferred-size: calc( ( 100% / 12 ) * 2 ); flex-basis: calc( ( 100% / 12 ) * 2 ); padding: 0 .5rem; }
  .col3-l { max-width: calc( ( 100% / 12 ) * 3 ); -ms-flex-preferred-size: calc( ( 100% / 12 ) * 3 ); flex-basis: calc( ( 100% / 12 ) * 3 ); padding: 0 .5rem; }
@@ -149,9 +152,10 @@ Running `$ npm start` will process the source css and place the built css in the
 
 ## Authors
 
-* [Guilherme Teodoro](http://guilhermeteodoro.com)
-* [Marcelo Nomoto](https://github.com/mynomoto)
+- [Guilherme Teodoro](http://guilhermeteodoro.com)
+- [Marcelo Nomoto](https://github.com/mynomoto)
 
 ## License
 
-MIT
+ISC
+
